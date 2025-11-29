@@ -1,0 +1,24 @@
+{
+  "name": "learn-react",
+  "version": "1.0.0",
+  "description": "Learning React from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viveksingh-01/learn-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/viveksingh-01/learn-react/issues"
+  },
+  "homepage": "https://github.com/viveksingh-01/learn-react#readme",
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  }
+}
