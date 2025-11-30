@@ -19,5 +19,9 @@
   "homepage": "https://github.com/viveksingh-01/learn-react#readme",
   "devDependencies": {
     "parcel": "^2.16.1"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   }
 }
