@@ -7,5 +7,13 @@ const heading = React.createElement("h1", {}, "Hello world - a message from Reac
 // Using JSX
 const headingWithJSX = <h1>Hello world - made using JSX!</h1>;
 
+// Basic component in React
+const HelloWorldComponent = () => <h1>Hello world, from React Component!</h1>;
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(headingWithJSX);
+
+// Rendering React element
+// root.render(headingWithJSX);
+
+// Rendering React component
+root.render(<HelloWorldComponent />);
