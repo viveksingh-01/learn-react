@@ -1,6 +1,6 @@
 import React from "react";
 
-const RACScenarioOne = () => {
+const RACScenario1 = () => {
   const [count, setCount] = React.useState(0);
 
   console.log("Render:", count);
@@ -12,7 +12,7 @@ const RACScenarioOne = () => {
   return <button onClick={() => setCount((c) => c + 1)}>Increment</button>;
 };
 
-export default RACScenarioOne;
+export default RACScenario1;
 
 // LOGS
 // Render: 0 -> Render: 1 -> Effect :1

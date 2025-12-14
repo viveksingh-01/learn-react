@@ -1,6 +1,6 @@
 import React from "react";
 
-const RACScenarioTwo = () => {
+const RACScenario2 = () => {
   const ref = React.useRef();
 
   console.log("Render");
@@ -17,7 +17,7 @@ const RACScenarioTwo = () => {
   return <div ref={ref}>Hello</div>;
 };
 
-export default RACScenarioTwo;
+export default RACScenario2;
 
 // LOGS
 // Render -> LayoutEffect -> Effect
