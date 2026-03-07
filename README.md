@@ -1,2 +1,2 @@
-# learn-react
-Learning React from scratch
+#learn-react
+Learning React :)
