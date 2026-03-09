@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/viveksingh-01/learn-react#readme",
   "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "parcel": "^2.16.1"
   },
   "dependencies": {
