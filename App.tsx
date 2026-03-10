@@ -3,6 +3,7 @@ import ComponentC from "./src/Hooks/useContext/ComponentC";
 
 const userName = "Mike";
 export const UserContext = createContext("");
+export const ThemeContext = createContext<"light" | "dark">("light");
 
 const App = () => {
   return (
@@ -11,7 +12,9 @@ const App = () => {
       {/* <HookCounter /> */}
 
       <UserContext.Provider value={userName}>
-        <ComponentC />
+        <ThemeContext.Provider value={"dark"}>
+          <ComponentC />
+        </ThemeContext.Provider>
       </UserContext.Provider>
     </main>
   );
