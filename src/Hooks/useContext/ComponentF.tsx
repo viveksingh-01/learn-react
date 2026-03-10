@@ -1,14 +1,16 @@
 import React from "react";
+import { UserContext } from "../../../App";
 
-type ComponentFProps = {
-  name: string;
-};
-
-const ComponentF = ({ name }: ComponentFProps) => {
+const ComponentF = () => {
   return (
     <div>
       <h3>This is Component F</h3>
-      <p>Logged-in user: {name}</p>
+
+      <UserContext.Consumer>
+        {(name) => {
+          return <p>Using Context API - Logged-in user: {name}</p>;
+        }}
+      </UserContext.Consumer>
     </div>
   );
 };
@@ -20,3 +22,6 @@ export default ComponentF;
 // as evident, we need to pass the userName from App component to ComponentF via props
 // which requires us to pass the props down manually at every level.
 // This is where Context-API can help us make this easier.
+
+// Using Context.Consumer, we consume the username as provided from the App component
+// This helps us avoid the hassle of manual props-drilling.

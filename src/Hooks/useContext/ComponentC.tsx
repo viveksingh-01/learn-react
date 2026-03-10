@@ -1,15 +1,11 @@
 import React from "react";
 import ComponentE from "./ComponentE";
 
-type ComponentCProps = {
-  name: string;
-};
-
-const ComponentC = ({ name }: ComponentCProps) => {
+const ComponentC = () => {
   return (
     <div>
       <h1>This is Component C</h1>
-      <ComponentE name={name} />
+      <ComponentE />
     </div>
   );
 };

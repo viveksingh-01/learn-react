@@ -1,7 +1,8 @@
-import React from "react";
+import React, { createContext } from "react";
 import ComponentC from "./src/Hooks/useContext/ComponentC";
 
 const userName = "Mike";
+export const UserContext = createContext("");
 
 const App = () => {
   return (
@@ -9,7 +10,9 @@ const App = () => {
       {/* <ClassCounter /> */}
       {/* <HookCounter /> */}
 
-      <ComponentC name={userName} />
+      <UserContext.Provider value={userName}>
+        <ComponentC />
+      </UserContext.Provider>
     </main>
   );
 };
