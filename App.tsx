@@ -1,12 +1,15 @@
 import React from "react";
-import ClassCounter from "./src/Hooks/useEffect/ClassCounter";
-import HookCounter from "./src/Hooks/useEffect/HookCounter";
+import ComponentC from "./src/Hooks/useContext/ComponentC";
+
+const userName = "Mike";
 
 const App = () => {
   return (
     <main>
-      <ClassCounter />
-      <HookCounter />
+      {/* <ClassCounter /> */}
+      {/* <HookCounter /> */}
+
+      <ComponentC name={userName} />
     </main>
   );
 };
