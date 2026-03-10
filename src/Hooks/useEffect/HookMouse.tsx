@@ -13,6 +13,14 @@ const HookMouse = () => {
   useEffect(() => {
     console.log("useEffect called - add mousemove listener");
     window.addEventListener("mousemove", logMousePosition);
+
+    // useEffect provides us with a way which mimics the componentWillUnmount lifecycle method
+    // using which we can return a function containing the cleanup activities
+    // and React will run that function when the component unmounts.
+    return () => {
+      console.log("cleanup function called - remove mousemove listener");
+      window.removeEventListener("mousemove", logMousePosition);
+    };
   }, []);
 
   return (
