@@ -1,28 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ThemeContext, UserContext } from "../../../App";
 
 const ComponentF = () => {
+  const username = useContext(UserContext);
+  const theme = useContext(ThemeContext);
+
   return (
     <div>
       <h3>This is Component F</h3>
-
-      <UserContext.Consumer>
-        {(name) => {
-          return (
-            <ThemeContext.Consumer>
-              {(theme) => {
-                return (
-                  <div>
-                    Using Context API
-                    <p>Logged-in user: {name}</p>
-                    <p>Theme preference: {theme}</p>
-                  </div>
-                );
-              }}
-            </ThemeContext.Consumer>
-          );
-        }}
-      </UserContext.Consumer>
+      <div>
+        Using Context API
+        <p>Logged-in user: {username}</p>
+        <p>Theme preference: {theme}</p>
+      </div>
     </div>
   );
 };
