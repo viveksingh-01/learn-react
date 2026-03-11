@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import ComponentC from "./src/Hooks/useContext/ComponentC";
+import ParentComponent from "./src/Hooks/useCallback/ParentComponent";
 
 const userName = "Mike";
 export const UserContext = createContext("");
@@ -11,11 +11,13 @@ const App = () => {
       {/* <ClassCounter /> */}
       {/* <HookCounter /> */}
 
-      <UserContext.Provider value={userName}>
+      {/* <UserContext.Provider value={userName}>
         <ThemeContext.Provider value={"dark"}>
           <ComponentC />
         </ThemeContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+
+      <ParentComponent />
     </main>
   );
 };
