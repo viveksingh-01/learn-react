@@ -32,3 +32,7 @@ export default ParentComponent;
 // Here, we can observe that upon making any state change - either age or salary
 // all the components are being re-rendered (as evident from the logs)
 // so, we need to find a way that React re-renders only that component where the state change happens.
+
+// The solution is "React.memo"
+// React.memo is a higher-order function that will prevent a functional component from re-rendering
+// if its props or state do not change.

@@ -15,4 +15,4 @@ const Count = ({ text, count }: CountProps) => {
   );
 };
 
-export default Count;
+export default React.memo(Count);
