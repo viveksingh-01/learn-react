@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Button from "./Button";
 import Count from "./Count";
 import Title from "./Title";
@@ -7,13 +7,13 @@ const ParentComponent = () => {
   const [age, setAge] = useState(30);
   const [salary, setSalary] = useState(50000);
 
-  const incrementAge = () => {
+  const incrementAge = useCallback(() => {
     setAge(age + 1);
-  };
+  }, [age]);
 
-  const incrementSalary = () => {
+  const incrementSalary = useCallback(() => {
     setSalary(salary + 5000);
-  };
+  }, [salary]);
 
   return (
     <div>
@@ -42,6 +42,17 @@ export default ParentComponent;
 
 // Now, how do we tell React that we don't need to create a new 'incrementSalary' function when we increment
 // the age, and vice-versa? The answer is useCallback hook!
+
+// What is useCallback?
+// useCallback is a hook that returns a memoized version of the callback function that only changes if
+// one of the dependencies has changed.
+
+// Why it is useful?
+// It is useful when passing callback functions as props to optimized child components (as in our case - React.memo)
+// that rely only on reference equality to prevent unnecessary re-renders.
+
+// In our case, using useCallback hook, we can cache the incrementSalary function and add the salary as dependency
+// so that only when there is change in the salary, a new incrementSalary function is created and returned.
 
 // ----------------------------------------------------------------------------------------------------------
 
