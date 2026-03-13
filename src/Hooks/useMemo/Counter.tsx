@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 const Counter = () => {
   const [counterOne, setCounterOne] = useState(0);
   const [counterTwo, setCounterTwo] = useState(0);
 
-  const isEven = () => {
+  const isEven = useMemo(() => {
     // mimicking an expensive/time-taking operation
     let i = 0;
     while (i < 2000000000) i++;
 
     return counterOne % 2 == 0;
-  };
+  }, [counterOne]);
 
   return (
     <div>
       <h2>useMemo Hook</h2>
       <div>
         <button onClick={() => setCounterOne(counterOne + 1)}>CounterOne - {counterOne}</button>
-        <span style={{ marginLeft: "4px" }}>{isEven() ? "EVEN" : "ODD"}</span>
+        <span style={{ marginLeft: "4px" }}>{isEven ? "EVEN" : "ODD"}</span>
       </div>
       <div>
         <button onClick={() => setCounterTwo(counterTwo + 1)}>CounterTwo - {counterTwo}</button>
@@ -38,3 +38,10 @@ export default Counter;
 // the ones which take more time.
 // So, how do we prevent the computation inside isEven to happen when counterTwo changes?
 // The solution is useMemo hook!
+
+// What is useMemo?
+// useMemo is a hook will only re-compute the cached value when one of its dependencies has changed.
+
+// useMemo vs. useCallback
+// useCallback - caches the provided function instance
+// useMemo - invokes the provided function and caches the result.
