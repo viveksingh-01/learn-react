@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import Counter from "./src/Hooks/useMemo/Counter";
+import FocusInput from "./src/Hooks/useRef/FocusInput";
 
 const userName = "Mike";
 export const UserContext = createContext("");
@@ -19,7 +19,9 @@ const App = () => {
 
       {/* <ParentComponent /> */}
 
-      <Counter />
+      {/* <Counter /> */}
+
+      <FocusInput />
     </main>
   );
 };
