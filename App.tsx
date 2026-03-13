@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import FocusInput from "./src/Hooks/useRef/FocusInput";
+import Timer from "./src/Hooks/useRef/Timer";
 
 const userName = "Mike";
 export const UserContext = createContext("");
@@ -21,7 +21,9 @@ const App = () => {
 
       {/* <Counter /> */}
 
-      <FocusInput />
+      {/* <FocusInput /> */}
+
+      <Timer />
     </main>
   );
 };
