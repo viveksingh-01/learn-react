@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import ParentComponent from "./src/Hooks/useCallback/ParentComponent";
+import Counter from "./src/Hooks/useMemo/Counter";
 
 const userName = "Mike";
 export const UserContext = createContext("");
@@ -17,7 +17,9 @@ const App = () => {
         </ThemeContext.Provider>
       </UserContext.Provider> */}
 
-      <ParentComponent />
+      {/* <ParentComponent /> */}
+
+      <Counter />
     </main>
   );
 };
